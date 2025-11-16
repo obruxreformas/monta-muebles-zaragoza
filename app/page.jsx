@@ -220,7 +220,7 @@ export default function Home() {
               📞 643 519 601
             </a>
             <a
-              href="mailto:info@obruxreformas.com"
+              href="mailto:obruxreformas@gmail.com"
               className="border-2 border-white text-white px-12 py-5 rounded-lg font-bold text-xl hover:bg-blue-700 transition"
             >
               ✉️ Enviar email
@@ -253,7 +253,7 @@ export default function Home() {
               <h3 className="text-white text-xl font-bold mb-4">Contacto</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>📞 643 519 601</li>
-                <li>✉️ info@obruxreformas.com</li>
+                <li>✉️ obruxreformas@gmail.com</li>
                 <li>📍 Zaragoza y alrededores</li>
               </ul>
             </div>
