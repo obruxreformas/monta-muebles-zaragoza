@@ -1,558 +1,372 @@
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link"; // Importa Link para una navegación interna eficiente
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Slider Section */}
-      <section className="relative h-screen overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1920&h=1080&fit=crop"
-            alt="Montaje de muebles IKEA"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-700/80"></div>
-        </div>
-        
-        <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
-          <div className="max-w-4xl">
-            <div className="mb-8">
-              <div className="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-2xl">
-                <span className="text-blue-900 font-black text-4xl">MM</span>
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-4 leading-tight">
-              MONTA-MUEBLES ZARAGOZA
-            </h1>
-            <p className="text-2xl md:text-3xl text-blue-100 mb-12 font-light">
-              Montaje profesional de muebles a domicilio
-            </p>
-            <a 
+    <div className="min-h-screen bg-gray-50 antialiased text-gray-800">
+      {/* Navbar (Encabezado) */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-95 backdrop-blur-md shadow-sm">
+        <nav className="container-custom flex justify-between items-center py-4">
+          <Link href="/" className="flex items-center gap-2 text-2xl font-black text-blue-primary">
+            <span className="text-3xl text-blue-600">🔧</span> MONTA-MUEBLES
+          </Link>
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="#servicios" className="nav-link">Servicios</Link>
+            <Link href="#galeria" className="nav-link">Galería</Link>
+            <Link href="#sobre-nosotros" className="nav-link">Sobre Nosotros</Link>
+            <Link href="#contacto" className="nav-link">Contacto</Link>
+            <a
               href="https://wa.me/34643519601?text=Hola,%20necesito%20información%20sobre%20montaje%20de%20muebles"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-12 py-6 rounded-full text-2xl font-bold transition-all transform hover:scale-105 shadow-2xl"
+              className="btn-primary"
             >
-              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+          {/* Mobile menu button (Hamburger icon) */}
+          <button className="md:hidden text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-2">
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </nav>
+        {/* Mobile menu (Hidden by default, can be toggled with JS) */}
+        <div className="md:hidden bg-white py-4 shadow-lg animate-fadeIn">
+          <nav className="flex flex-col items-center gap-4">
+            <Link href="#servicios" className="nav-link-mobile">Servicios</Link>
+            <Link href="#galeria" className="nav-link-mobile">Galería</Link>
+            <Link href="#sobre-nosotros" className="nav-link-mobile">Sobre Nosotros</Link>
+            <Link href="#contacto" className="nav-link-mobile">Contacto</Link>
+            <a
+              href="https://wa.me/34643519601?text=Hola,%20necesito%20información%20sobre%20montaje%20de%20muebles"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary w-fit mt-4"
+            >
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
               </svg>
               643 51 96 01
+            </a>
+          </nav>
+        </div>
+      </header>
+
+
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center text-center overflow-hidden pt-24 md:pt-0">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montaje-muebles-zaragoza-hero_r7n0b4.jpg"
+            alt="Montaje profesional de muebles IKEA"
+            fill
+            className="object-cover animate-fadeIn"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-700/70 to-blue-500/60 opacity-90"></div>
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 animate-fadeInUp delay-200">
+          <div className="mb-8">
+            <div className="w-36 h-36 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-2xl animate-pulse-logo">
+              <span className="text-blue-900 font-black text-5xl">MM</span>
+            </div>
+          </div>
+          <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-tight text-shadow-lg">
+            MONTA-MUEBLES ZARAGOZA
+          </h1>
+          <p className="text-2xl md:text-3xl text-blue-100 mb-12 font-light text-shadow-md">
+            Tu hogar, perfectamente ensamblado.
+          </p>
+          <a
+            href="https://wa.me/34643519601?text=Hola,%20necesito%20información%20sobre%20montaje%20de%20muebles"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-whatsapp icon-hover inline-flex items-center gap-3"
+          >
+            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            643 51 96 01
+          </a>
+        </div>
+      </section>
+
+      {/* Servicios Section */}
+      <section id="servicios" className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-16 animate-fadeInUp">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+              Nuestros Servicios
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Especialistas en montaje profesional de todo tipo de muebles a domicilio en Zaragoza.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ServiceCard
+              icon="🔧"
+              title="Montaje de muebles IKEA"
+              description="Montaje experto de toda la gama de IKEA, Leroy Merlin, Conforama, Jysk y más."
+            />
+            <ServiceCard
+              icon="🛋️"
+              title="Armarios y Estanterías"
+              description="Montaje y fijación segura de armarios empotrados, modulares y estanterías de cualquier tamaño."
+            />
+            <ServiceCard
+              icon="🏢"
+              title="Muebles de Oficina"
+              description="Instalación profesional de escritorios, sillas, estanterías y mobiliario para oficinas y espacios comerciales."
+            />
+            <ServiceCard
+              icon="🍳"
+              title="Cocinas y Baños"
+              description="Instalación completa de cocinas, encimeras, y muebles de baño con atención al detalle."
+            />
+            <ServiceCard
+              icon="📦"
+              title="Desmontaje y Mudanzas"
+              description="Desmontaje y montaje de tus muebles para mudanzas, garantizando su integridad y un servicio profesional."
+            />
+            <ServiceCard
+              icon="✅"
+              title="Garantía de Calidad"
+              description="Todos nuestros servicios cuentan con garantía y atención post-montaje para tu total tranquilidad."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section id="sobre-nosotros" className="section-padding bg-blue-50">
+        <div className="container-custom grid md:grid-cols-2 gap-12 items-center">
+          <div className="animate-slideInLeft">
+            <Image
+              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montador-profesional_a0m3zk.jpg"
+              alt="Montador de muebles profesional"
+              width={600}
+              height={400}
+              className="rounded-custom-lg shadow-custom-lg"
+            />
+          </div>
+          <div className="animate-fadeInUp delay-300">
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
+              Sobre <span className="text-blue-600">Monta-Muebles Zaragoza</span>
+            </h2>
+            <p className="text-lg text-gray-700 mb-4">
+              Somos un equipo de montadores de muebles profesionales con años de experiencia en Zaragoza y alrededores. Nos especializamos en ofrecer un servicio rápido, eficiente y de alta calidad para que no tengas que preocuparte por el complicado proceso de ensamblar tus muebles.
+            </p>
+            <p className="text-lg text-gray-700 mb-4">
+              Desde un simple taburete hasta la instalación de una cocina completa, trabajamos con precisión y cuidado, asegurando que cada pieza quede perfecta. Tu satisfacción es nuestra prioridad.
+            </p>
+            <a href="#contacto" className="btn-secondary mt-6">
+              Contáctanos hoy
             </a>
           </div>
         </div>
       </section>
 
-      {/* Servicios Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Nuestros servicios
+      {/* Gallery Section */}
+      <section id="galeria" className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-16 animate-fadeInUp">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+              Nuestros Trabajos
             </h2>
-            <p className="text-xl text-gray-600">
-              Especialistas en montaje profesional de todo tipo de muebles
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Descubre la calidad y el detalle en cada uno de nuestros montajes.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="flex gap-4 p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl">
-                  🔧
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">Montaje de muebles IKEA</h3>
-                <p className="text-gray-600">Montaje experto de toda la gama IKEA, Leroy Merlin, Conforama, Jysk...</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl">
-                  🛋️
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">Armarios y estanterías</h3>
-                <p className="text-gray-600">Montaje y fijación segura de armarios empotrados y estanterías...</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl">
-                  🏢
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">Muebles de oficina</h3>
-                <p className="text-gray-600">Instalación profesional de muebles de oficina y espacios comerciales...</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl">
-                  🍳
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">Cocinas completas</h3>
-                <p className="text-gray-600">Instalación profesional de cocinas y muebles de baño...</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl">
-                  📦
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">Mudanzas</h3>
-                <p className="text-gray-600">Desmontaje y montaje para tu mudanza con garantía profesional...</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl">
-                  ✅
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">Garantía total</h3>
-                <p className="text-gray-600">Servicio con garantía y atención post-montaje profesional...</p>
-              </div>
-            </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <GalleryItem
+              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748681/ikea-pax-montaje_p7l0m7.jpg"
+              alt="Montaje de armario PAX IKEA"
+              description="Armario PAX de IKEA, montaje impecable."
+            />
+            <GalleryItem
+              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748681/ikea-hemnes-comoda-montaje_e5n7d3.jpg"
+              alt="Montaje de cómoda HEMNES IKEA"
+              description="Cómoda HEMNES, ensamblaje preciso."
+            />
+            <GalleryItem
+              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748681/montaje-cocina_wz6b4x.jpg"
+              alt="Instalación de cocina completa"
+              description="Cocina moderna, instalación profesional."
+            />
+            <GalleryItem
+              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748681/mueble-oficina_a1d9e2.jpg"
+              alt="Montaje de mueble de oficina"
+              description="Mobiliario de oficina, listo para usar."
+            />
+            <GalleryItem
+              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748681/estanteria-leroy-merlin_g7s0w8.jpg"
+              alt="Montaje de estantería Leroy Merlin"
+              description="Estantería de Leroy Merlin, perfectamente nivelada."
+            />
+            <GalleryItem
+              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montaje-cama-canap%C3%A9_j4j0z6.jpg"
+              alt="Montaje de cama canapé"
+              description="Cama canapé, montaje robusto y funcional."
+            />
           </div>
         </div>
       </section>
 
       {/* CTA WhatsApp Grande */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div className="max-w-4xl mx-auto text-center px-6 animate-fadeInUp">
+          <h2 className="text-4xl md:text-6xl font-black mb-6 text-shadow-lg">
             Solicita presupuesto sin compromiso
           </h2>
-          <p className="text-xl md:text-2xl text-blue-100 mb-10">
-            Si buscas un montador de muebles en Zaragoza, llámanos o escríbenos por WhatsApp
+          <p className="text-xl md:text-2xl text-blue-100 mb-10 text-shadow-sm">
+            Si buscas un montador de muebles en Zaragoza y alrededores, llámanos o escríbenos por WhatsApp.
           </p>
-@import "tailwindcss";
+          <a
+            href="https://wa.me/34643519601?text=Hola,%20necesito%20información%20sobre%20montaje%20de%20muebles"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-whatsapp icon-hover inline-flex items-center gap-3"
+          >
+            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            643 51 96 01
+          </a>
+        </div>
+      </section>
 
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --radius: 0.625rem;
-  
-  /* Colores azul para MONTA-MUEBLES */
-  --blue-primary: #2563eb;
-  --blue-dark: #1e40af;
-  --blue-light: #3b82f6;
-  --gray-bg: #f9fafb;
+      {/* Contact Section */}
+      <section id="contacto" className="section-padding bg-gray-100">
+        <div className="container-custom text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 animate-fadeInUp">
+            ¿Tienes dudas? ¡Contáctanos!
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <ContactInfo
+              icon="📞"
+              title="Teléfono"
+              value="643 51 96 01"
+              link="tel:+34643519601"
+            />
+            <ContactInfo
+              icon="📧"
+              title="Email"
+              value="montamuebleszaragoza@gmail.com"
+              link="mailto:montamuebleszaragoza@gmail.com"
+            />
+            <ContactInfo
+              icon="📍"
+              title="Dirección"
+              value="Zaragoza, España"
+              link="https://www.google.com/maps/search/Zaragoza"
+              target="_blank"
+            />
+          </div>
+          <div className="mt-16 animate-fadeInUp delay-400">
+            <p className="text-lg text-gray-700 mb-6">
+              O rellena el siguiente formulario y nos pondremos en contacto contigo a la brevedad.
+            </p>
+            {/* Formulario de Contacto (Placeholder - se puede integrar un servicio de formularios) */}
+            <form className="max-w-xl mx-auto bg-white p-8 rounded-custom-lg shadow-custom">
+              <div className="mb-6">
+                <input
+                  type="text"
+                  placeholder="Tu Nombre"
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                />
+              </div>
+              <div className="mb-6">
+                <input
+                  type="email"
+                  placeholder="Tu Email"
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                />
+              </div>
+              <div className="mb-6">
+                <textarea
+                  placeholder="Tu Mensaje"
+                  rows="5"
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                ></textarea>
+              </div>
+              <button type="submit" className="btn-primary w-full py-4 text-xl">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container-custom text-center">
+          <div className="flex justify-center items-center gap-4 mb-6">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors icon-hover">
+              <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.812c-3.266 0-3.188 4.423-3.188 4.423v2.577z"></path></svg>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors icon-hover">
+              <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.254-.148-4.769-1.691-4.919-4.919-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors icon-hover">
+              <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-.403.673-.676 1.454-.676 2.28 0 1.574.795 2.965 2.005 3.774-.74-.029-1.44-.234-2.042-.564v.06c0 3.224 2.305 5.834 5.385 6.432-.424.113-.873.17-1.334.17-.327 0-.64-.032-.943-.095.857 2.118 3.305 3.659 6.22 3.702-2.795 2.118-6.347 3.375-10.144 3.375-.656 0-1.303-.039-1.934-.114 3.666 2.36 8.094 3.75 12.85 3.75 15.402 0 23.83-12.728 23.83-23.83 0-.36-.01-.718-.02-.858.82-.596 1.543-1.274 2.115-2.071z"></path></svg>
+            </a>
+          </div>
+          <p className="text-gray-400 text-sm mt-4">
+            &copy; {new Date().getFullYear()} Monta-Muebles Zaragoza. Todos los derechos reservados.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+// Componente para las tarjetas de servicio
+function ServiceCard({ icon, title, description }) {
+  return (
+    <div className="flex flex-col items-center p-8 bg-white rounded-custom-lg shadow-custom card-hover text-center animate-fadeInUp">
+      <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-4xl mb-6 shadow-md">
+        {icon}
+      </div>
+      <h3 className="text-2xl font-bold mb-3 text-gray-900">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+// Componente para los ítems de la galería
+function GalleryItem({ src, alt, description }) {
+  return (
+    <div className="bg-white rounded-custom-lg shadow-custom overflow-hidden card-hover animate-fadeInUp">
+      <Image
+        src={src}
+        alt={alt}
+        width={500}
+        height={300}
+        className="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500"
+      />
+      <div className="p-6">
+        <p className="text-lg font-semibold text-gray-800">{description}</p>
+      </div>
+    </div>
+  );
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-/* Scrollbar personalizado azul */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #2563eb;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #1e40af;
-}
-
-/* Container personalizado */
-.container-custom {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-@media (min-width: 768px) {
-  .container-custom {
-    padding: 0 48px;
-  }
-}
-
-/* Glass panel */
-.glass-panel {
-  backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* Tipografía */
-.text-display {
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -0.03em;
-}
-
-.text-hero {
-  font-size: clamp(3rem, 10vw, 8rem);
-  font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-}
-
-.text-body {
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.7;
-}
-
-.text-label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-/* Animaciones */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease-out;
-}
-
-.animate-slideInLeft {
-  animation: slideInLeft 0.6s ease-out;
-}
-
-/* Botones estilo profesional */
-.btn-primary {
-  background: #2563eb;
-  color: white;
-  padding: 1rem 2.5rem;
-  border-radius: 9999px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.btn-primary:hover {
-  background: #1e40af;
-  transform: scale(1.05);
-  box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
-}
-
-.btn-secondary {
-  background: white;
-  color: #2563eb;
-  padding: 1rem 2.5rem;
-  border-radius: 9999px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  border: 2px solid #2563eb;
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.btn-secondary:hover {
-  background: #f9fafb;
-  transform: scale(1.05);
-}
-
-/* Cards con hover */
-.card-hover {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-}
-
-/* Gradientes */
-.gradient-hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #1e3a8a 100%);
-}
-
-.gradient-overlay {
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
-}
-
-/* Secciones con espaciado */
-section {
-  position: relative;
-}
-
-.section-padding {
-  padding: 5rem 0;
-}
-
-@media (min-width: 768px) {
-  .section-padding {
-    padding: 8rem 0;
-  }
-}
-
-/* Focus states accesibles */
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid #2563eb;
-  outline-offset: 3px;
-}
-
-/* Links */
-a {
-  color: #2563eb;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #1e40af;
-}
-
-/* Títulos */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  line-height: 1.2;
-  color: #111827;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-}
-
-h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-}
-
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-}
-
-/* Párrafos */
-p {
-  margin-bottom: 1rem;
-  color: #4b5563;
-}
-
-/* Strong */
-strong {
-  font-weight: 700;
-  color: #1f2937;
-}
-
-/* Listas */
-ul, ol {
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* Imágenes responsive */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Sombras personalizadas */
-.shadow-custom {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-}
-
-.shadow-custom-lg {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-}
-
-/* Bordes redondeados */
-.rounded-custom {
-  border-radius: 1rem;
-}
-
-.rounded-custom-lg {
-  border-radius: 1.5rem;
-}
-
-/* Transiciones suaves */
-.transition-all {
-  transition: all 0.3s ease;
-}
-
-/* Backdrop blur */
-.backdrop-blur-custom {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* High contrast mode */
-@media (prefers-contrast: high) {
-  .glass-panel {
-    background: rgba(255, 255, 255, 0.98);
-    border: 2px solid rgba(0, 0, 0, 0.8);
-  }
-}
-
-/* Utilidades adicionales */
-.text-shadow {
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Hover effects para iconos */
-.icon-hover {
-  transition: transform 0.3s ease;
-}
-
-.icon-hover:hover {
-  transform: scale(1.1) rotate(5deg);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-  
-  .container-custom {
-    padding: 0 16px;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.75rem;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Print styles */
-@media print {
-  body {
-    background: white;
-    color: black;
-  }
-  
-  a {
-    text-decoration: underline;
-  }
-  
-  .no-print {
-    display: none !important;
-  }
+// Componente para la información de contacto
+function ContactInfo({ icon, title, value, link, target = "_self" }) {
+  return (
+    <a href={link} target={target} rel={target === "_blank" ? "noopener noreferrer" : ""} className="flex flex-col items-center p-6 bg-white rounded-custom-lg shadow-custom card-hover text-center">
+      <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-3xl mb-4 shadow-md">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold mb-2 text-gray-900">{title}</h3>
+      <p className="text-blue-600 text-lg font-medium">{value}</p>
+    </a>
+  );
 }
