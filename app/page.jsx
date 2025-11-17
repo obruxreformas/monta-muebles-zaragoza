@@ -205,27 +205,27 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <GalleryItem
-              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montaje-dormitorio-ikea_k8n2m1.jpg"
+              src="h/images/galeria-dormitorio.jpg"
               alt="Montaje de dormitorio IKEA"
             />
             <GalleryItem
-              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montaje-cocina-moderna_p3l5q2.jpg"
+              src="h/images/galeria-cocina.jpg"
               alt="Montaje de cocina moderna"
             />
             <GalleryItem
-              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montaje-salon-estanteria_m7k4n8.jpg"
+              src="h/images/galeria-salon.jpg"
               alt="Montaje de estantería de salón"
             />
             <GalleryItem
-              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montaje-armario-puertas_j2h6p9.jpg"
+              src="h/images/galeria-montador-mesa.jpg"
               alt="Montaje de armario con puertas"
             />
             <GalleryItem
-              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montaje-escritorio-oficina_r5t3w7.jpg"
+              src="h/images/galeria-escritorio.jpg"
               alt="Montaje de escritorio de oficina"
             />
             <GalleryItem
-              src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montaje-mueble-tv_n9s2k4.jpg"
+              src="h/images/galeria-mueble-tv.jpg"
               alt="Montaje de mueble de TV"
             />
                         <GalleryItem
