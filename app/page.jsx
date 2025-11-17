@@ -205,27 +205,27 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <GalleryItem
-              src="h/images/galeria-dormitorio.jpg"
+              src="/images/galeria-dormitorio.jpg"
               alt="Montaje de dormitorio IKEA"
             />
             <GalleryItem
-              src="h/images/galeria-cocina.jpg"
+              src="/images/galeria-cocina.jpg"
               alt="Montaje de cocina moderna"
             />
             <GalleryItem
-              src="h/images/galeria-salon.jpg"
+              src="/images/galeria-salon.jpg"
               alt="Montaje de estantería de salón"
             />
             <GalleryItem
-              src="h/images/galeria-montador-mesa.jpg"
+              src="/images/galeria-montador-mesa.jpg"
               alt="Montaje de armario con puertas"
             />
             <GalleryItem
-              src="h/images/galeria-escritorio.jpg"
+              src="/images/galeria-escritorio.jpg"
               alt="Montaje de escritorio de oficina"
             />
             <GalleryItem
-              src="h/images/galeria-mueble-tv.jpg"
+              src="/images/galeria-mueble-tv.jpg"
               alt="Montaje de mueble de TV"
             />
                         <GalleryItem
