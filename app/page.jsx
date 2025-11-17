@@ -228,6 +228,10 @@ export default function Home() {
               src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montaje-mueble-tv_n9s2k4.jpg"
               alt="Montaje de mueble de TV"
             />
+                        <GalleryItem
+                                        src="/images/galeria-montador-mueble-lavabo.jpg"
+                                        alt="Montaje de mueble de lavabo"
+                                      />
           </div>
         </div>
       </section>
