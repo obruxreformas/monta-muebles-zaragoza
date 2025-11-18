@@ -71,18 +71,17 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 animate-fadeInUp delay-200">
-  <div className="mb-8">
-    <div className="w-36 h-36 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-2xl animate-pulse-logo">
-      {/* Tu logo multiservicios-montaje-zaragoza.png con alt SEO optimizado */}
-      <img
-        src="/images/multiservicios-montaje-zaragoza.png"
-        alt="Montadores profesionales de muebles en Zaragoza. Expertos en montaje de armario, canapé, puente cama, litera, cama, sofá, cortinas, librería, cómoda, mueble de planchar. Montaje de Salón: comedor, mesa, sofá, lámparas, ventiladores de techo, soporte para tv, mueble televisor. Cocina, Muebles de baño, columnas de ducha, persianas. También fontaneros y electricistas para instalaciones y reparaciones a domicilio. Presupuesto sin compromiso, atención en el mismo día. Más de 10 años de experiencia como autónomos de mantenimiento y reparaciones. Trabajos garantizados. Desplazamiento gratuito y el mejor precio del mercado. Mantenimientos integrales para local, vivienda, empresa o negocio. Montamos muebles de IKEA, JYSK, Leroy Merlin, Conforama, Sweeek, Amazon, Bauhaus, Maisons du Monde, Kave Home, Habitat, Wayfair, Home24, La Redoute, El Corte Inglés, Zara Home, H&M Home, Mango Home, Muy Mucho, Casa Viva, Sklum, Beliani, Miliboo, Eminza, Muebles Boom, Muebles La Fábrica, Tuco, La Oca, Westwing, ManoMano, VidaXL, BoConcept, Fnac, Worten, Carrefour, Brico Depot, Bricor, Fama Sofás, LUFE, Kenay Home, Tikamoon, The Masie, Daui Home, Hannun, Woltu, Caprichos Home, Klast Home, Wabi Home, Marlo, Regalos Miguel, Casika, A Loja do Gato Preto, Lola Home, Marabillas, Ofelia Home Decor, Andreu World, Kettal, Sancal, Gandía Blasco, Doca, Capdell, Viccarbe, Ondarreta, Actiu, Pilma, Muebles Rey, Mimoondo, Poltronesofà, Natuzzi, Roche Boboism, Poliform, Muebles.com, Hipermueble, Muebles1Click, Samblo, Meka-Block, Puntogar, Galerías del Tresillo, Vente-Unique, Muji, Nanimarquina, Vondom, Expormim, Calligaris, Cassina, Vitra, Hay, Muuto, Arper, Pedrali, Cattelan Italia, Nardi, Dormity, ArtesMoble, Ofita, Steelcase, Mobenia, Mobles Nacher, Mobelium, Sillas.es, LaTiendaHome, Bolia, Wallapop, Vinted, eBay, Hogardecora, Mobelcenter, Rapimueble, Atrapamuebles, Homcom, Merkahome, idmarket y muchos muebles más."
-        className="w-full h-full object-contain p-4"
-      />
-    </div>
-  </div>
-</div>
+          <div className="mb-8">
+            <div className="w-40 h-40 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-2xl animate-pulse-logo">
+              {/* IMPORTANTE: Asegúrate de subir la imagen 'multiservicios-montaje-zaragoza.png' a la carpeta public/images/ */}
+              <img
+                src="/images/multiservicios-montaje-zaragoza.png"
+                alt="Multiservicios Obrux - Montaje de Muebles Zaragoza"
+                className="w-full h-full object-contain p-1"
+              />
+            </div>
           </div>
+
           <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-tight text-shadow-lg">
             MONTA-MUEBLES ZARAGOZA
           </h1>
@@ -179,7 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section - CÓDIGO ACTUALIZADO AQUÍ */}
+      {/* Gallery Section */}
       <section id="galeria" className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-16 animate-fadeInUp">
@@ -192,49 +191,41 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* NUEVO: Montaje de Lavabo */}
             <GalleryItem
               src="/images/galeria-montador-mueble-lavabo.jpg"
               alt="Montaje de mueble de lavabo"
               description="Mueble de lavabo, instalación profesional."
             />
-            {/* NUEVO: Montaje de Mesa */}
             <GalleryItem
               src="/images/galeria-montador-mesa.jpg"
               alt="Montaje de mesa de comedor o escritorio"
               description="Mesa de comedor o escritorio, montaje robusto."
             />
-            {/* REEMPLAZADO: Dormitorio (Ejemplo de cama) */}
             <GalleryItem
               src="/images/galeria-dormitorio.jpg"
               alt="Montaje de cama de madera y mesitas"
               description="Cama de dormitorio, ensamblaje de estructura."
             />
-            {/* REEMPLAZADO: Cocina (Ejemplo de la cocina blanca) */}
             <GalleryItem
               src="/images/galeria-cocina.jpg"
               alt="Instalación de cocina blanca completa"
               description="Cocina moderna, instalación profesional."
             />
-            {/* REEMPLAZADO: Cajonera (Ejemplo de mueble con cajones) */}
             <GalleryItem
               src="/images/galeria-cajonera.jpg"
               alt="Montaje de cajonera y cómoda"
               description="Cómoda o cajonera, ensamblaje preciso."
             />
-            {/* REEMPLAZADO: Armario / Salón (Ejemplo de mueble grande) */}
             <GalleryItem
               src="/images/galeria-salon.jpg"
               alt="Montaje de mueble de salón o armario"
               description="Mobiliario de salón/armario, fijación segura."
             />
-             {/* REEMPLAZADO: Estantería / Oficina (Ejemplo de estantería o escritorio) */}
             <GalleryItem
               src="/images/galeria-escritorio.jpg"
               alt="Montaje de mueble de oficina o escritorio"
               description="Mobiliario de oficina, listo para usar."
             />
-             {/* REEMPLAZADO: Mueble TV (Ejemplo de mueble para TV) */}
             <GalleryItem
               src="/images/galeria-mueble-tv.jpg"
               alt="Montaje de mueble para televisión"
@@ -298,7 +289,7 @@ export default function Home() {
             <p className="text-lg text-gray-700 mb-6">
               O rellena el siguiente formulario y nos pondremos en contacto contigo a la brevedad.
             </p>
-            {/* Formulario de Contacto (Placeholder - se puede integrar un servicio de formularios) */}
+            {/* Formulario de Contacto */}
             <form className="max-w-xl mx-auto bg-white p-8 rounded-custom-lg shadow-custom">
               <div className="mb-6">
                 <input
