@@ -8,534 +8,313 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Navigation */}
       <nav className="bg-white/95 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition animate-pulseLogo">
-                MM
+              <Link href="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition animate-pulse-logo">
+                <Image
+                  src="/images/multiservicios-montaje-zaragoza.png"
+                  alt="Logo Multiservicios Montaje Zaragoza"
+                  width={60}
+                  height={60}
+                  className="inline-block"
+                />
               </Link>
               <span className="ml-2 text-lg font-semibold text-gray-800 hidden sm:inline">MONTA-MUEBLES ZARAGOZA</span>
             </div>
-
             <div className="hidden md:flex space-x-8">
               <a href="#servicios" className="text-gray-700 hover:text-blue-600 transition font-medium">Servicios</a>
-              <a href="#como-funciona" className="text-gray-700 hover:text-blue-600 transition font-medium">Cómo funciona</a>
               <a href="#precios" className="text-gray-700 hover:text-blue-600 transition font-medium">Precios</a>
+              <a href="#como-funciona" className="text-gray-700 hover:text-blue-600 transition font-medium">Cómo funciona</a>
               <a href="#contacto" className="text-gray-700 hover:text-blue-600 transition font-medium">Contacto</a>
             </div>
-
-            <a
-              href="tel:+34643519601"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-md hidden md:block"
-            >
+            <a href="tel:+34643519601" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
               643 519 601
             </a>
-
-            <button
-              className="md:hidden text-gray-700"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button className="md:hidden text-gray-700" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
           </div>
         </div>
-
-        {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
-            <div className="px-4 pt-4 pb-6 space-y-3">
-              <a href="#servicios" className="block text-gray-700 hover:text-blue-600 transition py-2">Servicios</a>
-              <a href="#como-funciona" className="block text-gray-700 hover:text-blue-600 transition py-2">Cómo funciona</a>
-              <a href="#precios" className="block text-gray-700 hover:text-blue-600 transition py-2">Precios</a>
-              <a href="#contacto" className="block text-gray-700 hover:text-blue-600 transition py-2">Contacto</a>
-              <a href="tel:+34643519601" className="block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-center mt-4">643 519 601</a>
+          <div className="md:hidden bg-white border-t border-gray-200">
+            <div className="px-4 pt-2 pb-4 space-y-2">
+              <a href="#servicios" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
+              <a href="#precios" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Precios</a>
+              <a href="#como-funciona" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Cómo funciona</a>
+              <a href="#contacto" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Contacto</a>
+              <a href="tel:+34643519601" className="block py-2 text-gray-600 hover:text-blue-600 font-semibold">643 519 601</a>
             </div>
           </div>
         )}
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-white py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montaje-muebles-zaragoza-hero_r7n0b4.jpg')] bg-cover bg-center opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-block mb-6 animate-pulseLogo">
-              <div className="text-6xl lg:text-8xl font-bold text-blue-600">MM</div>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fadeInUp">
-              Montaje de Muebles en <span className="text-blue-600">Zaragoza</span>
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fadeInUp animation-delay-200">
-              Servicio profesional de montaje de muebles IKEA, JYSK, Leroy Merlin y más. Rápido, confiable y con garantía.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp animation-delay-400">
-              <a
-                href="tel:+34643519601"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition shadow-lg inline-block"
-              >
-                📞 Llamar Ahora
-              </a>
-              <a
-                href="https://wa.me/34643519601?text=Hola,%20necesito%20información%20sobre%20montaje%20de%20muebles"
-                className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition shadow-lg inline-block"
-              >
-                💬 WhatsApp
-              </a>
+      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="absolute inset-0"><div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-transparent"></div></div>
+        <div className="relative z-10 max-w-5xl mx-auto px-6 animate-fadeInUp delay-200">
+          <div className="mb-8">
+            <div className="w-36 h-36 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-2xl animate-pulse-logo">
+              <Image
+                src="/images/multiservicios-montaje-zaragoza.png"
+                alt="Montadores profesionales de muebles en Zaragoza. Expertos en montaje de armario, canapé, puente cama, litera, cama, sofá, cortinas, librería, cómoda, mueble de planchar. Montaje de Salón: comedor, mesa, sofá, lámparas, ventiladores de techo, soporte para tv, mueble televisor. Cocina, Muebles de baño, columnas de ducha, persianas. También fontaneros y electricistas para instalaciones y reparaciones a domicilio. Presupuesto sin compromiso, atención en el mismo día. Más de 10 años de experiencia como autónomos de mantenimiento y reparaciones. Trabajos garantizados. Desplazamiento gratuito y el mejor precio del mercado. Mantenimientos integrales para local, vivienda, empresa o negocio. Montamos muebles de IKEA, JYSK, Leroy Merlin, Conforama, Sweeek, Amazon, Bauhaus, Maisons du Monde, Kave Home, Habitat, Wayfair, Home24, La Redoute, El Corte Inglés, Zara Home, H&M Home, Mango Home, Muy Mucho, Casa Viva, Sklum, Beliani, Miliboo, Eminza, Muebles Boom, Muebles La Fábrica, Tuco, La Oca, Westwing, ManoMano, VidaXL, BoConcept, Fnac, Worten, Carrefour, Brico Depot, Bricor, Fama Sofás, LUFE, Kenay Home, Tikamoon, The Masie, Daui Home, Hannun, Woltu, Caprichos Home, Klast Home, Wabi Home, Marlo, Regalos Miguel, Casika, A Loja do Gato Preto, Lola Home, Marabillas, Ofelia Home Decor, Andreu World, Kettal, Sancal, Gandía Blasco, Doca, Capdell, Viccarbe, Ondarreta, Actiu, Pilma, Muebles Rey, Mimoondo, Poltronesofà, Natuzzi, Roche Bobois, Poliform, Muebles.com, Hipermueble, Muebles1Click, Samblo, Meka-Block, Puntogar, Galerías del Tresillo, Vente-Unique, Muji, Nanimarquina, Vondom, Expormim, Calligaris, Cassina, Vitra, Hay, Muuto, Arper, Pedrali, Cattelan Italia, Nardi, Dormity, ArtesMoble, Ofita, Steelcase, Mobenia, Mobles Nacher, Mobelium, Sillas.es, LaTiendaHome, Bolia, Wallapop, Vinted, eBay, Hogardecora, Mobelcenter, Rapimueble, Atrapamuebles, Homcom, Merkahome, idmarket y muchos muebles más."
+                width={144}
+                height={144}
+                className="w-full h-full object-contain p-4"
+              />
             </div>
           </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-center leading-tight">Montaje de Muebles Profesional en Zaragoza</h1>
+          <p className="text-xl md:text-2xl mb-10 text-center text-blue-100 max-w-3xl mx-auto">Servicio rápido, profesional y con garantía</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+            <a href="tel:+34643519601" className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300 transition shadow-lg">
+              Llamar Ahora
+            </a>
+            <a href="https://wa.me/34643519601?text=Hola,%20necesito%20informaci%u00f3n%20sobre%20montaje%20de%20muebles" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-green-600 transition shadow-lg">
+              WhatsApp
+            </a>
+          </div>
+          
+          <h3 className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto bg-blue-800/40 p-6 rounded-lg">
+            Somos técnicos profesionales montadores de armario, canapé, puente cama, litera, cama, sofá, cortinas, librería, cómoda, mueble de planchar. Salón: comedor, mesa, sofá, lámparas, ventiladores de techo, soporte para tv, mueble televisor. Cocina, Muebles de baño, columnas de ducha, persianas, fontaneros, hacemos trabajos de electricidad, instalaciones, realizamos todo tipo de reparaciones a domicilio. Presupuesto previo sin compromiso y atención en el mismo día. Llevamos más de 10 años trabajando como autónomos de mantenimiento y reparaciones a domicilio. Todos nuestros trabajos están garantizados. Nos desplazamos gratuitamente a su domicilio y le damos el mejor precio del mercado. Mantenimientos integrales para su local, vivienda, empresa o negocio.
+          </h3>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="servicios" className="py-20 bg-white">
+      <section id="servicios" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fadeInUp">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Montaje profesional para todas tus necesidades
-            </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Nuestros Servicios</h2>
+            <p className="text-xl text-gray-600">Montaje profesional para todas tus necesidades</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              icon="🛏️"
-              title="Dormitorios"
-              description="Montaje de camas, armarios, mesitas de noche y cómodas"
-            />
-            <ServiceCard
-              icon="🍳"
-              title="Cocinas"
-              description="Instalación de muebles de cocina, módulos y estanterías"
-            />
-            <ServiceCard
-              icon="🛋️"
-              title="Salón"
-              description="Montaje de muebles de TV, estanterías y vitrinas"
-            />
-            <ServiceCard
-              icon="💼"
-              title="Oficina"
-              description="Escritorios, sillas ergonómicas y estanterías de oficina"
-            />
-            <ServiceCard
-              icon="🚪"
-              title="Armarios"
-              description="Armarios empotrados, puertas correderas y organizadores"
-            />
-            <ServiceCard
-              icon="✅"
-              title="Otros Muebles"
-              description="Cualquier tipo de mueble que necesites montar"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+              <div className="flex justify-center mb-6">
+                <Image src="/images/galeria-dormitorio.jpg" alt="Montaje de muebles de dormitorio" width={400} height={300} className="rounded-lg" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">Dormitorios</h3>
+              <p className="text-gray-600 text-center">Montaje de camas, literas, armarios, mesitas de noche, cabeceros, cómodas, cortinas, persianas.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+              <div className="flex justify-center mb-6">
+                <Image src="/images/galeria-cocina.jpg" alt="Instalación de muebles de cocina" width={400} height={300} className="rounded-lg" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">Cocinas</h3>
+              <p className="text-gray-600 text-center">Instalación de muebles de cocina, módulos, estanterías, grifería, fontanería.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-8 mb-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+              <div className="flex flex-col md:flex-row gap-4 mb-6 justify-center">
+                <Image src="/images/galeria-salon.jpg" alt="Montaje de muebles de salón" width={300} height={250} className="rounded-lg" />
+                <Image src="/images/montador-profesional.jpg" alt="Montador profesional" width={300} height={250} className="rounded-lg" />
+                <Image src="/images/galeria-mueble-tv.jpg" alt="Montaje de mueble de TV" width={300} height={250} className="rounded-lg" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">Salón</h3>
+              <p className="text-gray-600 text-center">Montaje de muebles de TV, sofás, librerías, estanterías, vitrinas, mesa de comedor, sillas, lámparas, persianas, ventiladores de techo.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+              <div className="flex justify-center mb-6">
+                <Image src="/images/galeria-escritorio.jpg" alt="Montaje de escritorios" width={400} height={300} className="rounded-lg" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">Oficina</h3>
+              <p className="text-gray-600 text-center">Escritorios, sillas ergonómicas, taquillas y estanterías de oficina.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+              <div className="flex justify-center mb-6">
+                <Image src="/images/hero-background.jpg" alt="Carpintería y otros servicios" width={400} height={300} className="rounded-lg" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">Carpintería y otros</h3>
+              <p className="text-gray-600 text-center">Armarios empotrados, puertas correderas, puertas plegables, suelos laminados, pergo, vinílicos SPC, rodapiés, puertas y montaje de muebles de baño, columnas de ducha, espejos y de todo tipo de accesorios y muebles.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
+      <section id="precios" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Precios Transparentes</h2>
+            <p className="text-xl text-gray-600">Sin sorpresas, sin costes ocultos</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Muebles Pequeños</h3>
+              <p className="text-4xl font-extrabold text-blue-600 mb-4 text-center">Desde 35€</p>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Estanterías y librerías</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Mesitas de noche</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Sillas y taburetes</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-blue-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition border-4 border-blue-600">
+              <div className="bg-blue-600 text-white text-sm font-bold px-4 py-1 rounded-full inline-block mb-4">MÁS POPULAR</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Muebles Medianos</h3>
+              <p className="text-4xl font-extrabold text-blue-600 mb-4 text-center">Desde 60€</p>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Camas y somieres</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Mesas y escritorios</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Cómodas y cajoneras</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Muebles Grandes</h3>
+              <p className="text-4xl font-extrabold text-blue-600 mb-4 text-center">Desde 90€</p>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Armarios y roperos</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Cocinas completas</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Literas y canapés</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-6">* Precios orientativos. El coste final puede variar según complejidad y tamaño</p>
+            <a href="tel:+34643519601" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-blue-700 transition shadow-lg inline-block">Solicitar Presupuesto Gratis</a>
+          </div>
+        </div>
+      </section>
+
       <section id="como-funciona" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-slideInLeft">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Servicio Profesional de Montaje
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Con más de 10 años de experiencia en el montaje de muebles, ofrecemos un servicio rápido, profesional y con garantía. Trabajamos con todas las marcas: IKEA, JYSK, Leroy Merlin, Conforama y más.
-              </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Montaje rápido y eficiente</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Herramientas profesionales incluidas</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Garantía en todos nuestros trabajos</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Precios transparentes sin sorpresas</span>
-                </li>
-              </ul>
-              <a
-                href="tel:+34643519601"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition shadow-lg inline-block"
-              >
-                Solicitar Presupuesto
-              </a>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Servicio Profesional de Montaje</h2>
+            <p className="text-xl text-gray-600 mb-10">Con más de 10 años de experiencia en el montaje de muebles, ofrecemos un servicio rápido, profesional y con garantía. Trabajamos con todas las marcas: IKEA, JYSK, Leroy Merlin, Conforama, Sweeek, Amazon, Bauhaus, Maisons du Monde, Kave Home, Habitat, Wayfair, Home24, La Redoute, El Corte Inglés, Zara Home, H&M Home, Mango Home, Muy Mucho, Casa Viva, Sklum, Beliani, Miliboo, Eminza, Muebles Boom, Muebles La Fábrica, Tuco, La Oca, Westwing, ManoMano, VidaXL, BoConcept, Fnac, Worten, Carrefour, Brico Depot, Bricor, Fama Sofás, LUFE, Kenay Home, Tikamoon, The Masie, Daui Home, Hannun, Woltu, Caprichos Home, Klast Home, Wabi Home, Marlo, Regalos Miguel, Casika, A Loja do Gato Preto, Lola Home, Marabillas, Ofelia Home Decor, Andreu World, Kettal, Sancal, Gandía Blasco, Doca, Capdell, Viccarbe, Ondarreta, Actiu, Pilma, Muebles Rey, Mimoondo, Poltronesofà, Natuzzi, Roche Bobois, Poliform, Muebles.com, Hipermueble, Muebles1Click, Samblo, Meka-Block, Puntogar, Galerías del Tresillo, Vente-Unique, Muji, Nanimarquina, Vondom, Expormim, Calligaris, Cassina, Vitra, Hay, Muuto, Arper, Pedrali, Cattelan Italia, Nardi, Dormity, ArtesMoble, Ofita, Steelcase, Mobenia, Mobles Nacher, Mobelium, Sillas.es, LaTiendaHome, Bolia, Wallapop, Vinted, eBay, Hogardecora, Mobelcenter, Rapimueble, Atrapamuebles, Homcom, Merkahome, idmarket y muchos muebles más.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+              <div className="text-blue-600 text-4xl mb-4 text-center">⚡</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Montaje rápido y eficiente</h3>
+              <p className="text-gray-600 text-center">Servicio profesional en el tiempo acordado</p>
             </div>
-            <div className="animate-fadeInUp animation-delay-200">
-              <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="https://res.cloudinary.com/dzs0q4mpe/image/upload/v1709748682/montador-profesional_a0m3zk.jpg"
-                  alt="Montador profesional trabajando"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+              <div className="text-blue-600 text-4xl mb-4 text-center">🔧</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Herramientas profesionales incluidas</h3>
+              <p className="text-gray-600 text-center">Llevamos todo lo necesario</p>
             </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+              <div className="text-blue-600 text-4xl mb-4 text-center">✅</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Garantía en todos nuestros trabajos</h3>
+              <p className="text-gray-600 text-center">Respaldamos nuestra calidad</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+              <div className="text-blue-600 text-4xl mb-4 text-center">💶</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Precios transparentes sin sorpresas</h3>
+              <p className="text-gray-600 text-center">Sin costes ocultos</p>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <a href="tel:+34643519601" className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300 transition shadow-lg inline-block">Solicitar Presupuesto</a>
           </div>
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fadeInUp">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Trabajos Realizados</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Algunos de nuestros últimos montajes en Zaragoza
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <GalleryItem
-              src="/images/galeria-dormitorio.jpg"
-              alt="Montaje de dormitorio IKEA"
-            />
-            <GalleryItem
-              src="/images/galeria-cocina.jpg"
-              alt="Montaje de cocina moderna"
-            />
-            <GalleryItem
-              src="/images/galeria-salon.jpg"
-              alt="Montaje de estantería de salón"
-            />
-            <GalleryItem
-              src="/images/galeria-montador-mesa.jpg"
-              alt="Montaje de armario con puertas"
-            />
-            <GalleryItem
-              src="/images/galeria-escritorio.jpg"
-              alt="Montaje de escritorio de oficina"
-            />
-            <GalleryItem
-              src="/images/galeria-mueble-tv.jpg"
-              alt="Montaje de mueble de TV"
-            />
-                        <GalleryItem
-                                        src="/images/galeria-montador-mueble-lavabo.jpg"
-                                        alt="Montaje de mueble de lavabo"
-                                      />
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="precios" className="py-20 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fadeInUp">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Precios Transparentes</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Sin sorpresas. Presupuesto claro y detallado antes de comenzar
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition animate-fadeInUp">
-              <div className="text-4xl mb-4">🛏️</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Muebles Simples</h3>
-              <p className="text-gray-600 mb-4">Mesitas, sillas, estanterías pequeñas</p>
-              <div className="text-3xl font-bold text-blue-600 mb-4">Desde 30€</div>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Montaje rápido
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Herramientas incluidas
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-blue-600 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition transform scale-105 animate-fadeInUp animation-delay-200">
-              <div className="text-4xl mb-4">🚪</div>
-              <h3 className="text-2xl font-bold text-white mb-2">Muebles Complejos</h3>
-              <p className="text-blue-100 mb-4">Armarios, camas, muebles de cocina</p>
-              <div className="text-3xl font-bold text-white mb-4">Desde 80€</div>
-              <ul className="space-y-2 text-blue-100">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-white mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Montaje profesional
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-white mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Garantía incluida
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition animate-fadeInUp animation-delay-400">
-              <div className="text-4xl mb-4">🏠</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Proyectos Completos</h3>
-              <p className="text-gray-600 mb-4">Habitaciones completas, cocinas</p>
-              <div className="text-3xl font-bold text-blue-600 mb-4">Presupuesto</div>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Presupuesto personalizado
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Servicio completo
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-fadeInUp">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              ¿Necesitas montar tus muebles?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Contáctanos ahora y recibe tu presupuesto sin compromiso. Respuesta rápida garantizada.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+34643519601"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg inline-block"
-              >
-                📞 643 519 601
-              </a>
-              <a
-                href="https://wa.me/34643519601?text=Hola,%20necesito%20información%20sobre%20montaje%20de%20muebles"
-                className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition shadow-lg inline-block"
-              >
-                💬 Escríbenos por WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
       <section id="contacto" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fadeInUp">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Contacto</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Estamos aquí para ayudarte. Contáctanos por tu método preferido
-            </p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Contáctanos</h2>
+            <p className="text-xl text-gray-600">Estamos aquí para ayudarte con tu proyecto</p>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="animate-slideInLeft">
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nombre
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    placeholder="Tu nombre"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Teléfono
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    placeholder="Tu teléfono"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensaje
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    placeholder="Cuéntanos qué necesitas..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition shadow-lg"
-                >
-                  Enviar Mensaje
-                </button>
-              </form>
+          <div className="bg-gray-50 p-8 rounded-2xl shadow-lg">
+            <form action="https://formsubmit.co/obruxreformas@gmail.com" method="POST" className="space-y-6">
+              <input type="hidden" name="_subject" value="Nueva consulta desde Monta-Muebles Zaragoza" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://monta-muebles-zaragoza.vercel.app" />
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
+                <input type="text" id="name" name="name" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" />
+              </div>
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                <input type="tel" id="phone" name="phone" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+                <textarea id="message" name="message" rows={5} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+              </div>
+              <button type="submit" className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-blue-700 transition shadow-lg">Enviar Mensaje</button>
+            </form>
+          </div>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="text-blue-600 text-3xl mb-2">📞</div>
+              <h3 className="font-bold text-gray-900 mb-2">Teléfono</h3>
+              <a href="tel:+34643519601" className="text-blue-600 hover:text-blue-700">643 519 601</a>
             </div>
-
-            <div className="space-y-6 animate-fadeInUp animation-delay-200">
-              <ContactInfo
-                icon="📞"
-                title="Teléfono"
-                content="643 519 601"
-                link="tel:+34643519601"
-              />
-              <ContactInfo
-                icon="✉️"
-                title="Email"
-                content="obruxreformas@gmail.com"
-                link="mailto:obruxreformas@gmail.com"
-              />
-              <ContactInfo
-                icon="💬"
-                title="WhatsApp"
-                content="Envíanos un mensaje"
-                link="https://wa.me/34643519601?text=Hola,%20necesito%20información%20sobre%20montaje%20de%20muebles"
-              />
-              <ContactInfo
-                icon="📍"
-                title="Zona de Servicio"
-                content="Zaragoza y alrededores"
-              />
+            <div>
+              <div className="text-blue-600 text-3xl mb-2">💬</div>
+              <h3 className="font-bold text-gray-900 mb-2">WhatsApp</h3>
+              <a href="https://wa.me/34643519601" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">Enviar mensaje</a>
+            </div>
+            <div>
+              <div className="text-blue-600 text-3xl mb-2">📧</div>
+              <h3 className="font-bold text-gray-900 mb-2">Email</h3>
+              <a href="mailto:obruxreformas@gmail.com" className="text-blue-600 hover:text-blue-700">obruxreformas@gmail.com</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">MM</h3>
-              <p className="text-gray-400">
-                Servicio profesional de montaje de muebles en Zaragoza. Rápido, confiable y con garantía.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Enlaces</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#servicios" className="text-gray-400 hover:text-white transition">
-                    Servicios
-                  </a>
-                </li>
-                <li>
-                  <a href="#como-funciona" className="text-gray-400 hover:text-white transition">
-                    Cómo funciona
-                  </a>
-                </li>
-                <li>
-                  <a href="#precios" className="text-gray-400 hover:text-white transition">
-                    Precios
-                  </a>
-                </li>
-                <li>
-                  <a href="#contacto" className="text-gray-400 hover:text-white transition">
-                    Contacto
-                  </a>
-                </li>
-              </ul>
+              <h3 className="text-xl font-bold mb-4">MONTA-MUEBLES ZARAGOZA</h3>
+              <p className="text-gray-400">Servicio profesional de montaje de muebles en Zaragoza</p>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Contacto</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="tel:+34643519601" className="hover:text-white transition">
-                    📞 643 519 601
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:obruxreformas@gmail.com" className="hover:text-white transition">
-                    ✉️ obruxreformas@gmail.com
-                  </a>
-                </li>
-                <li>ñZaragoza y alrededores</li>
+                <li>Tel: 643 519 601</li>
+                <li>Email: obruxreformas@gmail.com</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Horario</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>Lunes a Viernes: 8:00 - 20:00</li>
+                <li>Sábados: 9:00 - 14:00</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>© 2025 Monta-Muebles Zaragoza. Todos los derechos reservados.</p>
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2025 Monta-Muebles Zaragoza. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
     </main>
   )
-}
-
-// Component Functions
-function ServiceCard({ icon, title, description }) {
-  return (
-    <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-2 animate-fadeInUp">
-      <div className="text-5xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  )
-}
-
-function GalleryItem({ src, alt }) {
-  return (
-    <div className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 animate-fadeInUp">
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className="object-cover"
-      />
-    </div>
-  )
-}
-
-function ContactInfo({ icon, title, content, link }) {
-  const CardContent = (
-    <div className="bg-gray-50 p-6 rounded-xl hover:bg-gray-100 transition">
-      <div className="flex items-start">
-        <div className="text-3xl mr-4">{icon}</div>
-        <div>
-          <h4 className="text-lg font-semibold text-gray-900 mb-1">{title}</h4>
-          <p className="text-gray-600">{content}</p>
-        </div>
-      </div>
-    </div>
-  )
-
-  if (link) {
-    return <a href={link} className="block">{CardContent}</a>
-  }
-  return CardContent
 }
