@@ -65,7 +65,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-center leading-tight">Montaje de Muebles Profesional en Zaragoza</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-center leading-tight">Montador de Muebles en Zaragoza</h1>
           <p className="text-xl md:text-2xl mb-10 text-center text-blue-100 max-w-3xl mx-auto">Servicio rápido, profesional y con garantía</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <a href="tel:+34643519601" className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300 transition shadow-lg">
@@ -77,7 +77,17 @@ export default function Home() {
           </div>
           
           <h3 className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto bg-blue-800/40 p-6 rounded-lg">
-            Somos técnicos profesionales montadores de armario, canapé, puente cama, litera, cama, sofá, cortinas, librería, cómoda, mueble de planchar. Salón: comedor, mesa, sofá, lámparas, ventiladores de techo, soporte para tv, mueble televisor. Cocina, Muebles de baño, columnas de ducha, persianas, fontaneros, hacemos trabajos de electricidad, instalaciones, realizamos todo tipo de reparaciones a domicilio. Presupuesto previo sin compromiso y atención en el mismo día. Llevamos más de 10 años trabajando como autónomos de mantenimiento y reparaciones a domicilio. Todos nuestros trabajos están garantizados. Nos desplazamos gratuitamente a su domicilio y le damos el mejor precio del mercado. Mantenimientos integrales para su local, vivienda, empresa o negocio.
+            Contrata un profesional al mejor precio, ahorrando tiempo y esfuerzo. 
+            Nos encargaremos del montaje de todo tipo de montaje de muebles con rapidez, precisión y garantía. 
+            
+            Montar un armario, canapé, puente cama, litera, cama, sofá, cortinas, librería, cómoda, mueble de planchar. 
+            Salón: comedor, mesa, sofá, lámparas, ventiladores de techo, soporte para tv, mueble televisor. 
+            Cocina, Muebles de baño, columnas de ducha, persianas, fontaneros.
+            Hacemos trabajos de electricidad, instalaciones.
+            Pintura general, pintura de habitaciones, realizamos todo tipo de reparaciones a domicilio. 
+            Presupuesto previo sin compromiso y atención en el mismo día. 
+            Llevamos más de 10 años trabajando como autónomos de mantenimiento y reparaciones a domicilio. 
+            Todos nuestros trabajos están garantizados. Nos desplazamos gratuitamente a su domicilio y le damos el mejor precio del mercado. Mantenimientos integrales para su local, vivienda, empresa o negocio.
           </h3>
         </div>
       </section>
@@ -317,4 +327,5 @@ export default function Home() {
       </footer>
     </main>
   )
+
 }
