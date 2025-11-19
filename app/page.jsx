@@ -26,7 +26,7 @@ export default function Home() {
             <div className="hidden md:flex space-x-8">
               <a href="#servicios" className="text-gray-700 hover:text-blue-600 transition font-medium">Servicios</a>
               <a href="#precios" className="text-gray-700 hover:text-blue-600 transition font-medium">Precios</a>
-              <a href="#como-funciona" className="text-gray-700 hover:text-blue-600 transition font-medium">Cómo funciona</a>
+              <a href="#cualquier marca" className="text-gray-700 hover:text-blue-600 transition font-medium">Cualquier marca</a>
               <a href="#contacto" className="text-gray-700 hover:text-blue-600 transition font-medium">Contacto</a>
             </div>
             <a href="tel:+34643519601" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
@@ -42,7 +42,7 @@ export default function Home() {
             <div className="px-4 pt-2 pb-4 space-y-2">
               <a href="#servicios" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
               <a href="#precios" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Precios</a>
-              <a href="#como-funciona" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Cómo funciona</a>
+              <a href="#cualquier-marca" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Cualquier marca</a>
               <a href="#contacto" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Contacto</a>
               <a href="tel:+34643519601" className="block py-2 text-gray-600 hover:text-blue-600 font-semibold">643 519 601</a>
             </div>
@@ -329,3 +329,4 @@ export default function Home() {
   )
 
 }
+
