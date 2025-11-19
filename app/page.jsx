@@ -86,7 +86,7 @@ export default function Home() {
             Hacemos trabajos de electricidad, instalaciones.
             Pintura general, pintura de habitaciones, realizamos todo tipo de reparaciones a domicilio. 
             Presupuesto previo sin compromiso y atención en el mismo día. 
-            Llevamos más de 10 años trabajando como autónomos de mantenimiento y reparaciones a domicilio. 
+            Llevamos más de 10 años trabajando como autónomos de mantenimiento, reparaciones y manitas pintores a domicilio. 
             Todos nuestros trabajos están garantizados. Nos desplazamos gratuitamente a su domicilio y le damos el mejor precio del mercado. Mantenimientos integrales para su local, vivienda, empresa o negocio.
           </h3>
         </div>
@@ -329,5 +329,6 @@ export default function Home() {
   )
 
 }
+
 
 
