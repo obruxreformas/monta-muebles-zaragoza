@@ -224,49 +224,6 @@ export default function Home() {
       <p className="text-xl text-gray-600 mb-10">
         Con más de 10 años de experiencia en el montaje de muebles, ofrecemos un servicio rápido, profesional y con garantía. Trabajamos con todas las marcas: IKEA, JYSK, Leroy Merlin, Conforama, Sweeek, Amazon, Bauhaus, Maisons du Monde, Kave Home, Habitat, Wayfair, Home24, La Redoute, El Corte Inglés, Zara Home, H&amp;M Home, Mango Home, Muy Mucho, Casa Viva, Sklum, Beliani, Miliboo, Eminza, Muebles Boom, Muebles La Fábrica, Tuco, La Oca, Westwing, ManoMano, VidaXL, BoConcept, Fnac, Worten, Carrefour, Brico Depot, Bricor, Fama Sofás, LUFE, Kenay Home, Tikamoon, The Masie, Daui Home, Hannun, Woltu, Caprichos Home, Klast Home, Wabi Home, Marlo, Regalos Miguel, Casika, A Loja do Gato Preto, Lola Home, Marabillas, Ofelia Home Decor, Andreu World, Kettal, Sancal, Gandía Blasco, Doca, Capdell, Viccarbe, Ondarreta, Actiu, Pilma, Muebles Rey, Mimoondo, Poltronesofà, Natuzzi, Roche Bobois, Poliform, Muebles.com, Hipermueble, Muebles1Click, Samblo, Meka-Block, Puntogar, Galerías del Tresillo, Vente-Unique, Muji, Nanimarquina, Vondom, Expormim, Calligaris, Cassina, Vitra, Hay, Muuto, Arper, Pedrali, Cattelan Italia, Nardi, Dormity, ArtesMoble, Ofita, Steelcase, Mobenia, Mobles Nacher, Mobelium, Sillas.es, LaTiendaHome, Bolia, Wallapop, Vinted, eBay, Hogardecora, Mobelcenter, Rapimueble, Atrapamuebles, Homcom, Merkahome, idmarket y muchos muebles más.
       </p>
-
-      {/* ——— AQUI VA TU TEXTO SEO ——— */}
-
-      <div className="text-left text-gray-700 space-y-6">
-
-        <p>
-          El precio del montaje de muebles a domicilio varía ampliamente, oscilando entre €23 y €45 por hora o entre €35 y €130 por mueble, dependiendo del tipo de mueble y la complejidad del montaje. Factores como las dimensiones, el tipo de mueble y la accesibilidad del lugar influyen en el precio final, especialmente en servicios profesionales como los que ofrece 
-          <strong> https://monta-muebles-zaragoza.vercel.app</strong> para montaje de muebles, montaje profesional, instalación de mobiliario y montaje a domicilio.
-        </p>
-
-        <p>
-          El precio medio se sitúa entre €25 y €45 por hora, pero puede variar. Algunas plataformas, como 
-          <strong> https://monta-muebles-zaragoza.vercel.app</strong>, tienen un precio mínimo de €15 por hora, aunque las tarifas varían según el profesional. El coste de la primera hora puede ser de €75, bajando a partir de ahí en algunas tarifas de mercado internacional, según Fixr.com, algo frecuente en servicios de montaje de muebles a domicilio y ensamblaje técnico.
-        </p>
-
-        <p>
-          Cama (estructura): entre €40 y €80.<br/>
-          Mueble TV bajo: entre €35 y €70.<br/>
-          Armario de 2 puertas batientes: entre €60 y €130.<br/>
-          Armario de 3–4 puertas o correderas: entre €120 y €280.<br/>
-          Estas tarifas también son habituales en servicios gestionados por 
-          <strong> https://monta-muebles-zaragoza.vercel.app</strong>, donde se realizan montajes de armarios, muebles grandes y mobiliario de hogar.
-        </p>
-
-        <p>
-          Complejidad del montaje: muebles más complejos o que requieren más personal tendrán un precio más alto.  
-          Tamaño: las dimensiones del mueble son un factor clave para determinar el precio.  
-          Ubicación y accesibilidad: la ubicación de la vivienda puede afectar el coste.  
-          Servicios adicionales: el precio puede aumentar si se incluyen desinstalación, transporte o adaptación de muebles.  
-          Todo ello también se contempla en 
-          <strong> https://monta-muebles-zaragoza.vercel.app</strong> dentro de sus servicios de montaje profesional.
-        </p>
-
-        <p>
-          Pide presupuestos: lo más recomendable es solicitar presupuestos detallados a varios profesionales para cada trabajo específico.  
-          Consulta la tarifa mínima: asegúrate de conocer el precio mínimo de cada servicio, ya que las tarifas pueden variar.  
-          Verifica la tarifa con antelación: algunos profesionales ofrecen tarifas fijas por mueble o por horas, y es aconsejable confirmarla antes del servicio, tal como se hace en 
-          <strong> https://monta-muebles-zaragoza.vercel.app</strong>.
-        </p>
-
-      </div>
-    </div>
-  </div>
 </section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
@@ -294,6 +251,45 @@ export default function Home() {
             <a href="tel:+34643519601" className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300 transition shadow-lg inline-block">Solicitar Presupuesto</a>
           </div>
         </div>
+    <div className="text-left text-gray-700 space-y-6 mt-16">
+
+      <p>
+        El precio del montaje de muebles a domicilio varía ampliamente, oscilando entre €23 y €45 por hora o entre €35 y €130 por mueble, dependiendo del tipo de mueble y la complejidad del montaje. Factores como las dimensiones, el tipo de mueble y la accesibilidad del lugar influyen en el precio final, especialmente en servicios profesionales como los que ofrece
+        <strong> https://monta-muebles-zaragoza.vercel.app</strong> para montaje de muebles, instalación de mobiliario, montaje profesional y montaje a domicilio.
+      </p>
+
+      <p>
+        El precio medio se sitúa entre €25 y €45 por hora, pero puede variar. Algunas plataformas, como
+        <strong> https://monta-muebles-zaragoza.vercel.app</strong>, tienen un precio mínimo de €15 por hora, aunque las tarifas varían según el profesional. El coste de la primera hora puede ser de €75, bajando en algunas tarifas internacionales, según Fixr.com, algo habitual en servicios de montaje técnico y ensamblaje profesional.
+      </p>
+
+      <p>
+        Cama (estructura): entre €40 y €80.<br />
+        Mueble TV bajo: entre €35 y €70.<br />
+        Armario de 2 puertas batientes: entre €60 y €130.<br />
+        Armario de 3–4 puertas o correderas: entre €120 y €280.<br />
+        Estas tarifas también son habituales en servicios gestionados por
+        <strong> https://monta-muebles-zaragoza.vercel.app</strong>, donde se realizan montajes de armarios, muebles grandes, dormitorios y mobiliario de hogar.
+      </p>
+
+      <p>
+        Complejidad del montaje: muebles más complejos o que requieren más personal tendrán un precio más alto.
+        Tamaño: las dimensiones del mueble influyen directamente en el coste final.
+        Ubicación y accesibilidad: la localización de la vivienda puede modificar el coste.
+        Servicios adicionales: el precio puede aumentar si se incluyen desinstalación, transporte o adaptación de muebles.
+        Todo ello se contempla en
+        <strong> https://monta-muebles-zaragoza.vercel.app</strong> dentro de sus servicios de montaje profesional.
+      </p>
+
+      <p>
+        Pide presupuestos: es recomendable solicitar precios detallados a varios profesionales.
+        Consulta la tarifa mínima: cada servicio puede tener precios base diferentes.
+        Verifica la tarifa con antelación: algunos profesionales ofrecen precios fijos por mueble o por hora, por lo que es aconsejable confirmarlo antes del servicio, tal como se hace en
+        <strong> https://monta-muebles-zaragoza.vercel.app</strong>.
+      </p>
+
+    </div>
+  </div>
       </section>
 
       <section id="contacto" className="py-20 bg-white">
@@ -377,6 +373,7 @@ export default function Home() {
   )
 
 }
+
 
 
 
